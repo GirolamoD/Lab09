@@ -21,6 +21,7 @@ public class Fermata {
 	public int getIdFermata() {
 		return idFermata;
 	}
+	
 
 	public void setIdFermata(int idFermata) {
 		this.idFermata = idFermata;
