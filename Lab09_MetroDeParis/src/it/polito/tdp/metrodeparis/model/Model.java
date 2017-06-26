@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jgrapht.UndirectedGraph;
 import org.jgrapht.WeightedGraph;
 import org.jgrapht.alg.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
@@ -40,7 +39,6 @@ public class Model {
 	
 	public String calcolaPercorso(Fermata p,Fermata a){
 		DijkstraShortestPath<Fermata,DefaultWeightedEdge> dsp = new DijkstraShortestPath<>(grafo,p,a);
-		dsp.findPathBetween(grafo, p, a);
 		String res = "" ;
 		for(DefaultWeightedEdge e : dsp.getPathEdgeList())
 			res+=e.toString()+"\n";

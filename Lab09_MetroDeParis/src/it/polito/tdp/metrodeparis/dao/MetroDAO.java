@@ -107,7 +107,7 @@ public class MetroDAO {
 					a = fermate.get(rs.getInt("id_stazA"));
 					if(grafo.vertexSet().contains(p) && grafo.vertexSet().contains(a)){
 						DefaultWeightedEdge e = grafo.addEdge(p, a);
-						Double peso = LatLngTool.distance(p.getCoords(),a.getCoords(), LengthUnit.KILOMETER);
+						Double peso = LatLngTool.distance(p.getCoords(),a.getCoords(), LengthUnit.KILOMETER) / l.getVelocita();
 						grafo.setEdgeWeight(e, peso);
 					}
 				}	

@@ -18,6 +18,10 @@ public class Linea {
 	public int getIdLinea(){
 		return this.idLinea ;
 	}
+	
+	public double getVelocita(){
+		return this.velocita;
+	}
 
 	@Override
 	public int hashCode() {
